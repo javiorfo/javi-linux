@@ -4,4 +4,4 @@ neovim, mpv, gimp, transmission-cli, polybar, zathura, zathura-pdf-mupdf, gopls,
 maven, gradle, translate-shell, dmenu, jq, tidy, neomutt, jdk-openjdk, lsof, unzip, netcat, tree
 
 # aur
-lux, hydroxide, jdtls
+lux, hydroxide, jdtls, slides
