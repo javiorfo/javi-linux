@@ -1,7 +1,18 @@
-# pacman
-xorg, base-devel, curl, wget, git, bluez, bluez-utils, blueman, pamixer, libreoffice-still, ttf-iosevka-nerd, go, nsxiv,
-neovim, mpv, gimp, transmission-cli, polybar, zathura, zathura-pdf-mupdf, gopls, lua, lua-language-server, xclip, xautolock,
-maven, gradle, translate-shell, dmenu, jq, tidy, neomutt, jdk-openjdk, lsof, unzip, netcat, tree, jwt-cli
+# Base
+xorg, base-devel, curl, wget, git, nsxiv, unzip
 
-# aur
-lux, hydroxide, jdtls, slides
+# WM
+polybar, dmenu, xclip, xautolock
+
+# Office
+libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pdf-mupdf, gimp, translate-shell
+
+# Languages & Prog utils
+go, gopls, lua, lua-language-server, rust, rust-analyzer, jdk-openjdk
+netcat, tree, jwt-cli, lsof, maven, gradle, neovim, jq, tidy
+
+# Audio, Bluetooth, Torrents, Mails
+bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
+
+# AUR
+lux, hydroxide, jdtls, slides, leftwm
