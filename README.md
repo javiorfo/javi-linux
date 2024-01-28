@@ -1,7 +1,7 @@
 # Base
-xorg, base-devel, curl, wget, git, nsxiv, unzip
+xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr
 
-# WM
+# WM and system
 polybar, dmenu, xclip, xautolock
 
 # Office
