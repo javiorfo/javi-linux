@@ -10,7 +10,7 @@ libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pdf-mupdf, gimp, translate
 # Languages & Prog utils
 go, gopls, lua, lua-language-server, rust, rust-analyzer, jdk-openjdk, clang
 netcat, tree, jwt-cli, lsof, maven, gradle, neovim, jq, tidy
-docker, docker-compose, docker-buildx, minikube
+docker, docker-compose, docker-buildx, minikube, ripgrep
 
 # Audio, Bluetooth, Torrents, Mails
 bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
