@@ -16,7 +16,7 @@ docker, docker-compose, docker-buildx, minikube, ripgrep
 bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
 
 # AUR (yay o paru)
-lux, hydroxide, jdtls, slides(presenterm)
+lux, hydroxide, jdtls, presenterm
 
 # Dudas
 polybar, leftwm
