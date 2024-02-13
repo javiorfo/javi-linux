@@ -1,5 +1,5 @@
 # Base
-xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, alacritty
+xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, alacritty (st)
 
 # WM and system
 dmenu, xclip, xautolock
@@ -16,7 +16,7 @@ docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep
 bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
 
 # AUR (paru)
-lux, hydroxide, jdtls, presenterm
+lux, hydroxide, jdtls, slides
 
 # Dudas
 polybar, leftwm
