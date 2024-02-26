@@ -1,5 +1,5 @@
 # Base
-xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, alacritty
+xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, alacritty, dosfstools
 
 # WM and system
 dmenu, xclip, xautolock
