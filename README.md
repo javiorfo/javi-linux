@@ -8,17 +8,16 @@ dmenu, xclip, xautolock
 libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pdf-mupdf, gimp, translate-shell
 
 # Languages & Prog utils
-go, gopls, lua, lua-language-server, jdk-openjdk, clang,
+rust, rust-analyzer, lua, lua-language-server, jdk-openjdk, clang,
 netcat, tree, lsof, maven, gradle, neovim, jq, tidy, jwt-cli,
-docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep
+docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep,
+emscripten
 
 # Audio, Bluetooth, Torrents, Mails
 bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
 
-# AUR (yay)
-lux, hydroxide, jdtls, graalvm, slides
+# AUR (paru)
+hydroxide, jdtls, graalvm, presenterm
 
-# WM
-dwm, st, slstatus
-
-leftwm, lux
+# Optional
+leftwm, lux, kotlin, kotlin-language-server
