@@ -17,7 +17,7 @@ emscripten
 bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
 
 # AUR (paru)
-hydroxide, jdtls, graalvm, presenterm
+hydroxide, jdtls, graalvm, presenterm, jdk21-graalvm-ee-bin
 
 # Optional
 leftwm, lux, kotlin, kotlin-language-server
