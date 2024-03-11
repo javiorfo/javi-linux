@@ -15,7 +15,7 @@ docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep
 # Audio, Bluetooth, Torrents, Mails
 bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
 
-# AUR (paru)
+# AUR (yay)
 hydroxide, jdtls, slides, jdk21-graalvm-ee-bin
 
 # Dudas
