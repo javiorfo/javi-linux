@@ -1,5 +1,5 @@
 # Base
-xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, dosfstools, alacritty
+xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, dosfstools
 
 # WM and system
 dmenu, xclip, xautolock
@@ -16,4 +16,7 @@ docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep
 bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
 
 # AUR (paru)
-hydroxide, jdtls, presenterm, jdk21-graalvm-ee-bin, lux (optional), leftwm
+hydroxide, jdtls, slides, jdk21-graalvm-ee-bin, lux (optional)
+
+# Externos (implementarlos en AUR)
+dwm, st, slstatus 
