@@ -13,7 +13,7 @@ netcat, tree, lsof, maven, gradle, neovim, jq, tidy, jwt-cli,
 docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep
 
 # Audio, Bluetooth, Torrents, Mails
-bluez, bluez-utils, pamixer, mpv, transmission-cli, neomutt
+bluez, bluez-utils, pamixer (reemplazo por pactl de pipewire), mpv, transmission-cli, neomutt
 
 # AUR (yay)
 hydroxide, jdtls, slides, jdk21-graalvm-ee-bin, lux (optional)
