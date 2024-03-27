@@ -1,5 +1,5 @@
 # Base
-xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, dosfstools
+xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, dosfstools, brightnessctl
 
 # WM and system
 dmenu, xclip, xautolock
@@ -16,7 +16,7 @@ docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep
 bluez, bluez-utils, pamixer (reemplazo por pactl de pipewire), mpv, transmission-cli, neomutt
 
 # AUR (yay)
-hydroxide, jdtls, slides, jdk21-graalvm-ee-bin, lux (optional)
+hydroxide, jdtls, slides, jdk21-graalvm-ee-bin
 
 # Externos (implementarlos en AUR)
-dwm, st, slstatus 
+dwm, st, slstatus (reemplazar por xsetroot)
