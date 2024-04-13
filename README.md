@@ -9,4 +9,4 @@
 - hydroxide, jdtls, slides, jdk21-graalvm-ee-bin
 
 # Externos (implementarlos en AUR)
-dwm
+dwm, lombok
