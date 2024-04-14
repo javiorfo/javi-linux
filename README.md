@@ -3,7 +3,7 @@
 - `Office:` libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pdf-mupdf, gimp, translate-shell
 - `Optional:` brightnessctl
 - `Audio, bluetooth, torrents, mails:` bluez, bluez-utils, mpv, transmission-cli, neomutt
-- `Languages & Prog utils:` lua, lua-language-server, jdk21-openjdk, go, gopls, rust, rust-analyzer, clang, netcat, tree, lsof, maven, gradle, neovim, jq, tidy, docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep, jwt-cli, plantuml
+- `Languages & Prog utils:` lua, lua-language-server, jdk21-openjdk, rust, rust-analyzer, clang, netcat, tree, lsof, maven, gradle, neovim, jq, tidy, docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep, jwt-cli, plantuml
 
 # AUR (paru)
 - hydroxide, jdtls, presenterm, jdk21-graalvm-ee-bin
