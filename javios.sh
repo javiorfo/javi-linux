@@ -10,7 +10,7 @@ sudo pacman --needed -S libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pd
 sudo pacman --needed -S bluez, bluez-utils, mpv, transmission-cli, neomutt
 
 # PROGRAMMING
-lua, lua-language-server, jdk21-openjdk, rust, rust-analyzer, clang, go, gopls, netcat, tree, lsof, maven, gradle, neovim, jq, tidy, docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep, jwt-cli, plantuml
+lua, lua-language-server, jdk21-openjdk, rust, rust-analyzer, clang, netcat, tree, lsof, maven, gradle, neovim, jq, tidy, docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep, jwt-cli, plantuml
 
 # OPTIONAL
 # sudo pacman --needed -S brightnessctl
