@@ -1,5 +1,5 @@
 # Pacman
-- `Base:` xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, dosfstools, dmenu, xclip, xautolock, xorg-xinit, vi, less, scrot, startx, figlet, tree, imagemagick, alacritty, pass, lf
+- `Base:` xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, dosfstools, dmenu, xclip, xautolock, xorg-xinit, vi, less, scrot, startx, figlet, tree, imagemagick, alacritty, pass, lf, peek
 - `Office:` libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pdf-mupdf, gimp, translate-shell, texlive-latexextra, texlive-binextra
 - `Optional:` brightnessctl
 - `Audio, bluetooth, torrents, mails:` bluez, bluez-utils, mpv, transmission-cli, neomutt
