@@ -3,10 +3,10 @@
 - `Office:` libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pdf-mupdf, gimp, translate-shell, texlive-latexextra, texlive-binextra
 - `Optional:` brightnessctl
 - `Audio, bluetooth, torrents, mails:` bluez, bluez-utils, mpv, transmission-cli, neomutt
-- `Languages & Prog utils:` lua, lua-language-server, jdk21-openjdk, go, gopls, delve, clang, netcat, tree, lsof, maven, neovim, jq, tidy, docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep, jwt-cli, plantuml
+- `Languages & Prog utils:` lua, lua-language-server, jdk21-openjdk, go, gopls, rust, rust-analyzer, delve, clang, netcat, tree, lsof, maven, neovim, jq, tidy, docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep, jwt-cli, plantuml, gdb
 
 # AUR (yay)
-- hydroxide, jdtls, slides, jdk21-graalvm-ee-bin, lombok-common, java-debug
+- hydroxide, jdtls, slides, jdk21-graalvm-ee-bin, lombok-common, java-debug, codelldb-bin
 
 # Externos
 dwm, yay, xtatusbar
