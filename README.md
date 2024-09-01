@@ -1,12 +1,14 @@
-# Pacman
-- `Base:` xorg, base-devel, curl, wget, git, nsxiv, unzip, xorg-xrandr, dosfstools, dmenu, xclip, xautolock, xorg-xinit, vi, less, scrot, startx, figlet, tree, imagemagick, alacritty, pass, lf, peek
-- `Office:` libreoffice-still, ttf-iosevka-nerd, zathura, zathura-pdf-mupdf, gimp, translate-shell, texlive-latexextra, texlive-binextra
-- `Optional:` brightnessctl
-- `Audio, bluetooth, torrents, mails:` bluez, bluez-utils, mpv, transmission-cli, neomutt
-- `Languages & Prog utils:` lua, lua-language-server, jdk21-openjdk, go, gopls, rust, rust-analyzer, delve, clang, netcat, tree, lsof, maven, neovim, jq, tidy, docker, docker-compose, docker-buildx, minikube, kubectl, ripgrep, jwt-cli, plantuml, gdb
+# javi-linux
+*Personal post-install script for Arch Linux*
 
-# AUR (yay)
-- hydroxide, jdtls, slides, jdk21-graalvm-ee-bin, lombok-common, java-debug, codelldb-bin
+## Installation
+```bash
+git clone https://github.com/javiorfo/javi-linux
+cd javi-linux
+./javinstall.sh
+```
 
-# Externos
-dwm, yay, xtatusbar
+---
+
+### Donate
+- **Bitcoin** [(QR)](https://raw.githubusercontent.com/javiorfo/img/master/crypto/bitcoin.png)  `1GqdJ63RDPE4eJKujHi166FAyigvHu5R7v`
