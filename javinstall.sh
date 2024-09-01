@@ -60,3 +60,4 @@ echo "Done!"
 
 # Configure files folder
 # Bluetooth config
+# Bash
