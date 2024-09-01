@@ -33,7 +33,9 @@ fi
 
 ##### PACMAN #####
 echo "Installing base..."
-sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv unzip xorg-xrandr dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
+sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
+    dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
+    tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
 echo "Done!"
 
 echo "Installing office apps..."
@@ -41,7 +43,9 @@ sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura z
 echo "Done!"
 
 echo "Installing programming tools..."
-sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls rust rust-analyzer delve clang netcat lsof maven jq tidy docker docker-compose docker-buildx minikube kubectl ripgrep jwt-cli plantuml gdb
+sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
+    rust rust-analyzer delve clang netcat lsof maven jq tidy docker docker-compose docker-buildx \
+    minikube kubectl ripgrep jwt-cli plantuml gdb
 echo "Done!"
 ##### END #####
 
