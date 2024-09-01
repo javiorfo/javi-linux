@@ -33,7 +33,7 @@ fi
 
 ##### PACMAN #####
 echo "Installing base..."
-sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv unzip xorg-xrandr dosfstools dmenu xclip firefox xautolock xorg-xinit vi less scrot figlet tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
+sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv unzip xorg-xrandr dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
 echo "Done!"
 
 echo "Installing office apps..."
@@ -70,16 +70,7 @@ git clone https://github.com/javiorfo/nvim
 cd ..
 echo "Done!"
 
-echo "Setting bash config..."
-rm .bashrc
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bashrc
-echo "Done!"
 
-echo "Setting alacritty config..."
-mkdir -p .config/alacritty
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
-mv alacritty.toml .config/alacritty/
-echo "Done!"
 
 echo "Installing yay..."
 git clone https://aur.archlinux.org/yay.git
@@ -99,6 +90,37 @@ echo "Done!"
 
 
 ##### CONFIG FILES #####
+echo "Setting bash config..."
+rm .bashrc
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bashrc
+echo "Done!"
+
+echo "Setting alacritty config..."
+mkdir -p .config/alacritty
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
+mv alacritty.toml .config/alacritty/
+echo "Done!"
+
+echo "Setting zathura config..."
+mkdir -p .config/zathura
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/zathura/zathurarc
+mv zathurarc .config/zathura/
+echo "Done!"
+
+echo "Setting lf config..."
+mkdir -p .config/lf
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/icons
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/lfrc
+mv icon lfrc .config/lf
+echo "Done!"
+
+echo "Setting slides config..."
+mkdir -p .config/slides
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/slides/header.md
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/slides/theme.json
+mv header.md theme.json .config/slides
+echo "Done!"
+
 echo "Installing config files..."
 cp javi-linux/files/.bash_profile .
 cp javi-linux/files/.xinitrc .
