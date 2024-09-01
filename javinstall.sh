@@ -111,7 +111,7 @@ echo "Setting lf config..."
 mkdir -p .config/lf
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/icons
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/lfrc
-mv icon lfrc .config/lf
+mv icons lfrc .config/lf
 echo "Done!"
 
 echo "Setting slides config..."
