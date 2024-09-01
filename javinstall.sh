@@ -33,8 +33,7 @@ fi
 
 ##### PACMAN #####
 echo "Installing base..."
-sudo pacman --needed --noconfirm -S xorg base-devel curl wget nmcli nsxiv unzip xorg-xrandr dosfstools dmenu xclip firefox \
-    xautolock xorg-xinit vi less scrot startx figlet tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
+sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv unzip xorg-xrandr dosfstools dmenu xclip firefox xautolock xorg-xinit vi less scrot figlet tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
 echo "Done!"
 
 echo "Installing office apps..."
@@ -42,8 +41,7 @@ sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura z
 echo "Done!"
 
 echo "Installing programming tools..."
-sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls rust rust-analyzer \
-    delve clang netcat lsof maven jq tidy docker docker-compose docker-buildx minikube kubectl ripgrep jwt-cli plantuml gdb
+sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls rust rust-analyzer delve clang netcat lsof maven jq tidy docker docker-compose docker-buildx minikube kubectl ripgrep jwt-cli plantuml gdb
 echo "Done!"
 ##### END #####
 
@@ -73,7 +71,14 @@ cd ..
 echo "Done!"
 
 echo "Setting bash config..."
-wget https://github.com/javiorfo/dotfiles/blob/master/.bashrc
+rm .bashrc
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bashrc
+echo "Done!"
+
+echo "Setting alacritty config..."
+mkdir -p .config/alacritty
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
+mv alacritty.toml .config/alacritty/
 echo "Done!"
 
 echo "Installing yay..."
@@ -95,8 +100,8 @@ echo "Done!"
 
 ##### CONFIG FILES #####
 echo "Installing config files..."
-sudo cp javi-linux/files/.bash_profile .
-sudo cp javi-linux/files/.xinitrc .
+cp javi-linux/files/.bash_profile .
+cp javi-linux/files/.xinitrc .
 sudo cp javi-linux/files/00-keyboard.conf /etc/X11/xorg.conf.d/
 echo "Done!"
 

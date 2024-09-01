@@ -1,6 +1,9 @@
 # javi-linux
 *Personal post-install script for Arch Linux*
 
+## Caveats
+- Dependencies: `git`
+
 ## Installation
 ```bash
 git clone https://github.com/javiorfo/javi-linux
