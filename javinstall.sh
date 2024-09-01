@@ -38,7 +38,7 @@ sudo pacman --needed --noconfirm -S xorg base-devel curl wget git nsxiv unzip xo
 echo "Done!"
 
 echo "Installing office apps..."
-sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell texlive-latexextra texlive-binextra
+sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell typst
 echo "Done!"
 
 echo "Installing programming tools..."
