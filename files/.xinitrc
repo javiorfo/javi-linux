@@ -1,5 +1,5 @@
 # background
-feh --bg-scale $HOME/.config/leftwm/images/grey.jpg &
+feh --bg-scale $HOME/dwm/dwm.jpg &
 
 ## Status Bar
 xtatusbar &
