@@ -33,7 +33,7 @@ fi
 
 ##### PACMAN #####
 echo "Installing base..."
-sudo pacman --needed --noconfirm -S xorg base-devel curl wget git nsxiv unzip xorg-xrandr dosfstools dmenu xclip firefox \
+sudo pacman --needed --noconfirm -S xorg base-devel curl wget nmcli nsxiv unzip xorg-xrandr dosfstools dmenu xclip firefox \
     xautolock xorg-xinit vi less scrot startx figlet tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
 echo "Done!"
 
