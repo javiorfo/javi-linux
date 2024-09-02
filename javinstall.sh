@@ -126,9 +126,11 @@ mv header.md theme.json .config/slides
 echo "Done!"
 
 echo "Installing config files..."
-cp javi-linux/files/.bash_profile .
-cp javi-linux/files/.xinitrc .
-sudo cp javi-linux/files/00-keyboard.conf /etc/X11/xorg.conf.d/
+rm .bash_profile .xinitrc
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bash_profile
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.xinitrc
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/etc/X11/xorg.conf.d/00-keyboard.conf
+sudo mv 00-keyboard.conf /etc/X11/xorg.conf.d/
 echo "Done!"
 
 echo "Setting bluetooth config..."
