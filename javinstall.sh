@@ -139,4 +139,10 @@ echo "Done!"
 ##### END #####
 
 
+##### GROUPS AND USERS #####
+echo "Setting docker group..."
+sudo usermod -aG docker $USER
+echo "Done!"
+##### END #####
+
 echo "javi-linux finished. Reboot your computer."
