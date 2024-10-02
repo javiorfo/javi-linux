@@ -61,9 +61,9 @@ sudo make clean install
 cd ..
 echo "Done!"
 
-echo "Installing rustatusbar..."
-git clone https://github.com/javiorfo/rustatusbar
-cd rustatusbar
+echo "Installing rstatusbar..."
+git clone https://github.com/javiorfo/rstatusbar
+cd rstatusbar
 sudo make clean install
 cd ..
 echo "Done!"
@@ -105,10 +105,10 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritt
 mv alacritty.toml .config/alacritty/
 echo "Done!"
 
-echo "Setting rustatusbar config..."
-mkdir -p .config/rustatusbar
-wget https://raw.githubusercontent.com/javiorfo/rustatusbar/refs/heads/master/examples/config.toml
-mv config.toml .config/rustatusbar/
+echo "Setting rstatusbar config..."
+mkdir -p .config/rstatusbar
+wget https://raw.githubusercontent.com/javiorfo/rstatusbar/refs/heads/master/examples/config.toml
+mv config.toml .config/rstatusbar/
 echo "Done!"
 
 echo "Setting zathura config..."
