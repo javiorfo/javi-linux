@@ -61,20 +61,11 @@ sudo make clean install
 cd ..
 echo "Done!"
 
-echo "Installing rstatusbar..."
-git clone https://github.com/javiorfo/rstatusbar
-cd rstatusbar
-sudo make clean install
-cd ..
-echo "Done!"
-
 echo "Setting nvim config..."
 cd .config
 git clone https://github.com/javiorfo/nvim
 cd ..
 echo "Done!"
-
-
 
 echo "Installing yay..."
 git clone https://aur.archlinux.org/yay.git
@@ -88,7 +79,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug codelldb-bin
+yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug codelldb-bin rstatusbar
 echo "Done!"
 ##### END #####
 
