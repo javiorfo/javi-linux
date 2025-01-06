@@ -44,8 +44,8 @@ echo "Done!"
 
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
-    rust rust-analyzer delve clang netcat lsof maven jq tidy docker docker-compose docker-buildx \
-    minikube kubectl plantuml gdb unixodbc ripgrep
+    zig zls delve clang netcat lsof maven jq tidy docker docker-compose docker-buildx \
+    minikube kubectl plantuml gdb unixodbc
 echo "Done!"
 ##### END #####
 
@@ -79,7 +79,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug codelldb-bin rstatusbar
+yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug rstatusbar
 echo "Done!"
 ##### END #####
 
