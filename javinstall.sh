@@ -79,7 +79,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug rstatusbar
+yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug ztatusbar
 echo "Done!"
 ##### END #####
 
@@ -96,10 +96,10 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritt
 mv alacritty.toml .config/alacritty/
 echo "Done!"
 
-echo "Setting rstatusbar config..."
-mkdir -p .config/rstatusbar
-wget https://raw.githubusercontent.com/javiorfo/rstatusbar/refs/heads/master/examples/config.toml
-mv config.toml .config/rstatusbar/
+echo "Setting ztatusbar config..."
+mkdir -p .config/ztatusbar
+wget https://raw.githubusercontent.com/javiorfo/ztatusbar/refs/heads/master/config/config.toml
+mv config.toml .config/ztatusbar/
 echo "Done!"
 
 echo "Setting zathura config..."
