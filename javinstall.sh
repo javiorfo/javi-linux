@@ -35,11 +35,11 @@ fi
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
     dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
-    tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli
+    tree imagemagick ghostty pass lf peek bluez bluez-utils mpv transmission-cli
 echo "Done!"
 
 echo "Installing office apps..."
-sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell typst
+sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell
 echo "Done!"
 
 echo "Installing programming tools..."
@@ -90,10 +90,10 @@ rm .bashrc
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bashrc
 echo "Done!"
 
-echo "Setting alacritty config..."
-mkdir -p .config/alacritty
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
-mv alacritty.toml .config/alacritty/
+echo "Setting ghostty config..."
+mkdir -p .config/ghostty
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/ghostty/config
+mv config .config/ghostty/
 echo "Done!"
 
 echo "Setting ztatusbar config..."
