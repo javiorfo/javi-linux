@@ -44,7 +44,7 @@ echo "Done!"
 
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
-    zig zls delve rust rust-analyzer clang netcat lsof maven jq docker docker-compose docker-buildx \
+    zig zls delve clang netcat lsof maven jq docker docker-compose docker-buildx \
     minikube kubectl plantuml gdb unixodbc
 echo "Done!"
 ##### END #####
