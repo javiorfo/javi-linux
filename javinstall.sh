@@ -35,7 +35,7 @@ fi
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
     dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
-    tree imagemagick ghostty pass lf peek bluez bluez-utils mpv transmission-cli
+    tree imagemagick alacritty pass yazi peek bluez bluez-utils mpv transmission-cli
 echo "Done!"
 
 echo "Installing office apps..."
@@ -79,7 +79,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug ztatusbar
+yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug codelldb ztatusbar passcualito
 echo "Done!"
 ##### END #####
 
@@ -90,10 +90,10 @@ rm .bashrc
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bashrc
 echo "Done!"
 
-echo "Setting ghostty config..."
-mkdir -p .config/ghostty
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/ghostty/config
-mv config .config/ghostty/
+echo "Setting alacritty config..."
+mkdir -p .config/alacritty
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
+mv config .config/alacritty/
 echo "Done!"
 
 echo "Setting ztatusbar config..."
@@ -108,11 +108,11 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/zathura/
 mv zathurarc .config/zathura/
 echo "Done!"
 
-echo "Setting lf config..."
-mkdir -p .config/lf
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/icons
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/lfrc
-mv icons lfrc .config/lf
+echo "Setting yazi config..."
+mkdir -p .config/yazi
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
+mv yazi.toml theme.toml .config/yazi
 echo "Done!"
 
 echo "Setting slides config..."
