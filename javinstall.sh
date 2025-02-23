@@ -35,7 +35,7 @@ fi
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
     dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
-    tree imagemagick alacritty pass yazi peek bluez bluez-utils mpv transmission-cli ueberzug
+    tree imagemagick alacritty pass lf peek bluez bluez-utils mpv transmission-cli ueberzug
 echo "Done!"
 
 echo "Installing office apps..."
@@ -45,7 +45,7 @@ echo "Done!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     zig zls delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    rust rust-analyzer minikube kubectl plantuml gdb unixodbc
+    minikube kubectl plantuml gdb unixodbc
 echo "Done!"
 ##### END #####
 
@@ -108,11 +108,11 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/zathura/
 mv zathurarc .config/zathura/
 echo "Done!"
 
-echo "Setting yazi config..."
-mkdir -p .config/yazi
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
-mv yazi.toml theme.toml .config/yazi
+echo "Setting lf config..."
+mkdir -p .config/lf
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/icons
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/lf/lfrc
+mv lfrc icons .config/lf
 echo "Done!"
 
 echo "Setting slides config..."
