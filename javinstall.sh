@@ -33,9 +33,9 @@ fi
 
 ##### PACMAN #####
 echo "Installing base..."
-sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
-    dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
-    tree imagemagick alacritty pass yazi peek bluez bluez-utils mpv transmission-cli ueberzugpp
+sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr ripgrep \
+    dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet ueberzugpp \
+    tree imagemagick alacritty pass yazi peek bluez bluez-utils mpv transmission-cli 
 echo "Done!"
 
 echo "Installing office apps..."
