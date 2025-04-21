@@ -34,8 +34,8 @@ fi
 ##### PACMAN #####
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr ripgrep \
-    dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet ueberzugpp \
-    tree imagemagick alacritty pass yazi peek bluez bluez-utils mpv transmission-cli 
+    dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
+    tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli 
 echo "Done!"
 
 echo "Installing office apps..."
@@ -45,7 +45,7 @@ echo "Done!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    minikube kubectl plantuml gdb unixodbc rust rust-analyzer
+    minikube kubectl plantuml gdb unixodbc zig zls
 echo "Done!"
 ##### END #####
 
@@ -106,13 +106,6 @@ echo "Setting zathura config..."
 mkdir -p .config/zathura
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/zathura/zathurarc
 mv zathurarc .config/zathura/
-echo "Done!"
-
-echo "Setting yazi config..."
-mkdir -p .config/yazi
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
-mv theme.toml yazi.toml .config/yazi
 echo "Done!"
 
 echo "Setting slides config..."
