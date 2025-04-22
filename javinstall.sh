@@ -33,7 +33,7 @@ fi
 
 ##### PACMAN #####
 echo "Installing base..."
-sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr ripgrep \
+sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
     dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
     tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli 
 echo "Done!"
@@ -79,7 +79,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug ztatusbar passcualito bitsmuggler
+yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin ztatusbar passcualito bitsmuggler
 echo "Done!"
 ##### END #####
 
