@@ -35,7 +35,7 @@ fi
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
     dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
-    tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli 
+    tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli ripgrep
 echo "Done!"
 
 echo "Installing office apps..."
@@ -45,7 +45,7 @@ echo "Done!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    minikube kubectl plantuml gdb unixodbc zig zls
+    minikube kubectl plantuml gdb unixodbc rust rust-analyzer
 echo "Done!"
 ##### END #####
 
@@ -65,6 +65,13 @@ echo "Setting nvim config..."
 cd .config
 git clone https://github.com/javiorfo/nvim
 cd ..
+echo "Done!"
+
+echo "Setting yazi config..."
+mkdir -p .config/yazi
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
+mv theme.toml yazi.toml .config/yazi
 echo "Done!"
 
 echo "Installing yay..."
