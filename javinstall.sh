@@ -34,8 +34,8 @@ fi
 ##### PACMAN #####
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
-    dosfstools dmenu xclip firefox xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
-    tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli ripgrep yazi
+    dosfstools dmenu xclip xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
+    tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli
 echo "Done!"
 
 echo "Installing office apps..."
@@ -45,7 +45,7 @@ echo "Done!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    minikube kubectl plantuml gdb unixodbc rust rust-analyzer
+    minikube kubectl plantuml gdb unixodbc zig zls
 echo "Done!"
 ##### END #####
 
@@ -67,13 +67,6 @@ git clone https://github.com/javiorfo/nvim
 cd ..
 echo "Done!"
 
-echo "Setting yazi config..."
-mkdir -p .config/yazi
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
-mv theme.toml yazi.toml .config/yazi
-echo "Done!"
-
 echo "Installing yay..."
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -86,7 +79,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin ztatusbar passcualito bitsmuggler
+yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin ztatusbar passcualito bitsmuggler libernull
 echo "Done!"
 ##### END #####
 
