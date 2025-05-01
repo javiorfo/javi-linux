@@ -79,7 +79,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin ztatusbar passcualito bitsmuggler libernull
+yay --noconfirm -S xautolock jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin ztatusbar passcualito bitsmuggler libernull
 echo "Done!"
 ##### END #####
 
