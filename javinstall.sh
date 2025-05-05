@@ -34,7 +34,7 @@ fi
 ##### PACMAN #####
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
-    dosfstools dmenu xclip xautolock xorg-xinit xorg-xsetroot vi less scrot figlet \
+    dosfstools dmenu xclip xautolock xorg-xinit xorg-xsetroot vi less scrot figlet ueberzugpp \
     tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli ripgrep
 echo "Done!"
 
