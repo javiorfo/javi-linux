@@ -34,18 +34,18 @@ fi
 ##### PACMAN #####
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
-    dosfstools dmenu xclip xautolock xorg-xinit xorg-xsetroot vi less scrot figlet ueberzugpp \
-    tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli libzip ripgrep
+    dosfstools dmenu xclip xorg-xinit xorg-xsetroot vi less scrot figlet ueberzugpp \
+    tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli libzip
 echo "Done!"
 
 echo "Installing office apps..."
-sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell yazi
+sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell
 echo "Done!"
 
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    minikube kubectl plantuml gdb unixodbc zig zls rust rust-analyzer
+    minikube kubectl plantuml gdb unixodbc zig zls
 echo "Done!"
 ##### END #####
 
@@ -73,13 +73,6 @@ cd yay
 makepkg -si
 cd ..
 rm -rdf yay
-echo "Done!"
-
-echo "Setting yazi config..."
-mkdir -p .config/yazi
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
-mv theme.toml yazi.toml .config/yazi
 echo "Done!"
 ##### END #####
 
