@@ -45,7 +45,7 @@ echo "Done!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    minikube kubectl plantuml gdb unixodbc zig zls rust rust-analyzer
+    minikube kubectl plantuml gdb unixodbc rust rust-analyzer
 echo "Done!"
 ##### END #####
 
@@ -86,7 +86,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S xautolock jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin ztatusbar passcualito bitsmuggler libernull
+yay --noconfirm -S xautolock jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin rstatusbar passcualito bitsmuggler
 echo "Done!"
 ##### END #####
 
@@ -103,10 +103,10 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritt
 mv config .config/alacritty/
 echo "Done!"
 
-echo "Setting ztatusbar config..."
-mkdir -p .config/ztatusbar
-wget https://raw.githubusercontent.com/javiorfo/ztatusbar/refs/heads/master/config/config.toml
-mv config.toml .config/ztatusbar/
+echo "Setting rstatusbar config..."
+mkdir -p .config/rstatusbar
+wget https://raw.githubusercontent.com/javiorfo/rstatusbar/refs/heads/master/examples/config.toml
+mv config.toml .config/rstatusbar/
 echo "Done!"
 
 echo "Setting zathura config..."
