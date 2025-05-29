@@ -67,12 +67,12 @@ git clone https://github.com/javiorfo/nvim
 cd ..
 echo "Done!"
 
-echo "Installing yay..."
-git clone https://aur.archlinux.org/yay.git
-cd yay
+echo "Installing paru..."
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -si
 cd ..
-rm -rdf yay
+rm -rdf paru
 echo "Done!"
 
 echo "Setting yazi config..."
@@ -86,7 +86,7 @@ echo "Done!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-yay --noconfirm -S xautolock jdtls slides jdk21-graalvm-ee-bin lombok-common java-debug librewolf-bin rstatusbar passcualito bitsmuggler
+paru --noconfirm -S xautolock jdtls slides lombok-common java-debug librewolf-bin rstatusbar passcualito bitsmuggler
 echo "Done!"
 ##### END #####
 
