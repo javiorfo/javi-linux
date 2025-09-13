@@ -33,8 +33,8 @@ fi
 
 ##### PACMAN #####
 echo "Installing base..."
-sudo pacman --needed --noconfirm -S xorg base-devel curl wget nsxiv feh unzip xorg-xrandr \
-    dosfstools dmenu xclip xorg-xinit xorg-xsetroot vi less scrot figlet libzip ripgrep \
+sudo pacman --needed --noconfirm -S base-devel curl wget unzip dosfstools vi less figlet libzip \
+    niri waybar fuzzel swaybg swayidle swayimg wl-clipboard ripgrep \
     tree imagemagick alacritty peek bluez bluez-utils mpv transmission-cli ueberzugpp
 echo "Done!"
 
@@ -45,7 +45,7 @@ echo "Done!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    minikube kubectl plantuml gdb unixodbc rust rust-analyzer
+    plantuml gdb unixodbc rust rust-analyzer
 echo "Done!"
 ##### END #####
 
@@ -54,13 +54,6 @@ cd ~
 
 
 ##### EXTERNAL #####
-echo "Installing dwm..."
-git clone https://github.com/javiorfo/dwm
-cd dwm
-sudo make clean install
-cd ..
-echo "Done!"
-
 echo "Setting nvim config..."
 cd .config
 git clone https://github.com/javiorfo/nvim
@@ -81,12 +74,33 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/the
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
 mv theme.toml yazi.toml .config/yazi
 echo "Done!"
+
+echo "Setting niri config..."
+mkdir -p .config/niri/scripts
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/niri/scripts/idle.sh
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/niri/config.kdl
+mv idle.sh .config/niri/scripts
+mv config.kdl .config/niri
+echo "Done!"
+
+echo "Setting waybar config..."
+mkdir -p .config/waybar
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/waybar/config.jsonc
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/waybar/style.css
+mv config.jsonc style.css .config/waybar
+echo "Done!"
+
+echo "Setting fuzzel config..."
+mkdir -p .config/fuzzel
+wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/fuzzel/fuzzel.ini
+mv fuzzel.ini .config/fuzzel
+echo "Done!"
 ##### END #####
 
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-paru --noconfirm -S xautolock jdtls slides lombok-common java-debug librewolf-bin rstatusbar passcualito bitsmuggler
+paru --noconfirm -S jdtls slides lombok-common java-debug librewolf-bin passcualito gativideo
 echo "Done!"
 ##### END #####
 
@@ -103,12 +117,6 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritt
 mv config .config/alacritty/
 echo "Done!"
 
-echo "Setting rstatusbar config..."
-mkdir -p .config/rstatusbar
-wget https://raw.githubusercontent.com/javiorfo/rstatusbar/refs/heads/master/examples/config.toml
-mv config.toml .config/rstatusbar/
-echo "Done!"
-
 echo "Setting zathura config..."
 mkdir -p .config/zathura
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/zathura/zathurarc
@@ -123,11 +131,8 @@ mv header.md theme.json .config/slides
 echo "Done!"
 
 echo "Installing config files..."
-rm .bash_profile .xinitrc
+rm .bash_profile
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bash_profile
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.xinitrc
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/etc/X11/xorg.conf.d/00-keyboard.conf
-sudo mv 00-keyboard.conf /etc/X11/xorg.conf.d/
 echo "Done!"
 
 echo "Setting bluetooth config..."
