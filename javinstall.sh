@@ -115,7 +115,7 @@ echo "Done!"
 echo "Setting alacritty config..."
 mkdir -p .config/alacritty
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
-mv config .config/alacritty/
+mv alacritty.toml .config/alacritty/
 echo "Done!"
 
 echo "Setting zathura config..."
