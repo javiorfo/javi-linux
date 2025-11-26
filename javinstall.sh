@@ -52,6 +52,7 @@ echo "Done!"
 
 cd ~
 
+mkdir -p .config
 
 ##### EXTERNAL #####
 echo "Setting nvim config..."
