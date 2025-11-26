@@ -35,7 +35,7 @@ fi
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S base-devel curl wget unzip dosfstools vi less figlet libzip \
     niri waybar fuzzel swaybg swayidle swayimg wl-clipboard ripgrep wf-recorder slurp xwayland-satellite \
-    xdg-desktop-portal-gtk, xdg-desktop-portal-gnome, tree imagemagick alacritty bluez bluez-utils mpv transmission-cli ueberzugpp
+    xdg-desktop-portal-gtk xdg-desktop-portal-gnome tree imagemagick alacritty bluez bluez-utils mpv transmission-cli ueberzugpp
 echo "Done!"
 
 echo "Installing office apps..."
