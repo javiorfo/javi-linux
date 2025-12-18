@@ -45,7 +45,7 @@ echo " office apps installed!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk21-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    plantuml gdb unixodbc rustup rust-analyzer
+    plantuml gdb unixodbc rustup rust-analyzer pyright python-pip
 echo " programming tools installed!"
 ##### END #####
 
