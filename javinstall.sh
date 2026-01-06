@@ -45,7 +45,7 @@ echo " office apps installed!"
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk25-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    plantuml gdb unixodbc rustup rust-analyzer pyright python-pip
+    plantuml gdb unixodbc zig zls
 echo " programming tools installed!"
 ##### END #####
 
@@ -64,13 +64,13 @@ git clone https://github.com/javiorfo/nvim
 cd ..
 echo " nvim set!"
 
-echo "Installing paru..."
-git clone https://aur.archlinux.org/paru.git
-cd paru
+echo "Installing yay..."
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si
 cd ..
-rm -rdf paru
-echo " paru installed!"
+rm -rdf yay
+echo " yay installed!"
 
 echo "Setting yazi config..."
 mkdir -p .config/yazi
