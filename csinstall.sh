@@ -53,8 +53,30 @@ while true; do
     case $choice in
         1)
             sudo pacman --needed --noconfirm -S libx11 libxft libxinerama xorg-server xorg-xinit xorg-xsetroot \
-                dmenu xclip scrot nsxiv feh
+                dmenu xclip scrot nsxiv feh peek
+
+            echo "Installing dwm..."
+            git clone https://github.com/javiorfo/dwm
+            cd dwm
+            sudo make clean install
+            cd ..
             echo " DWM installed!"
+
+            echo "Installing st..."
+            git clone https://github.com/javiorfo/st
+            cd st
+            sudo make clean install
+            cd ..
+            echo " ST installed!"
+
+            echo "Installing config files..."
+            rm .bash_profile .xinitrc
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bash_profile
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.xinitrc
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/etc/X11/xorg.conf.d/00-keyboard.conf
+            sudo mv 00-keyboard.conf /etc/X11/xorg.conf.d/
+            echo " bash_profile set!"
+            
             break
             ;;
         2)
@@ -100,6 +122,11 @@ while true; do
             wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
             mv alacritty.toml .config/alacritty/
             echo " alacritty configured!"
+
+            echo "Installing config files..."
+            rm .bash_profile
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bash_profile
+            echo " bash_profile set!"
             
             break
             ;;
@@ -148,7 +175,7 @@ echo " yay installed!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-paru --noconfirm -S jdtls slides lombok-common java-debug librewolf-bin passcualito
+paru --noconfirm -S jdtls slides lombok-common java-debug librewolf-bin passcualito xautolock
 echo " AUR software installed!"
 ##### END #####
 
@@ -171,11 +198,6 @@ wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/slides/h
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/slides/theme.json
 mv header.md theme.json .config/slides
 echo " slides configured!"
-
-echo "Installing config files..."
-rm .bash_profile
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bash_profile
-echo " bash_profile set!"
 
 echo "Setting bluetooth config..."
 sudo sed -i 's/#AutoEnable=true/AutoEnable=true/g' /etc/bluetooth/main.conf
