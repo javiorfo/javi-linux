@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo -e "      ██╗ █████╗ ██╗   ██╗██╗      ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗"
-echo -e "      ██║██╔══██╗██║   ██║██║      ██║     ██║████╗  ██║██║   ██║╚██╗██╔╝"
-echo -e "      ██║███████║██║   ██║██║█████╗██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝ "
-echo -e " ██   ██║██╔══██║╚██╗ ██╔╝██║╚════╝██║     ██║██║╚██╗██║██║   ██║ ██╔██╗ "
-echo -e " ╚█████╔╝██║  ██║ ╚████╔╝ ██║      ███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗"
-echo -e "  ╚════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝      ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝"
+echo -e " ██████╗██╗  ██╗ █████╗  ██████╗ ███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗ █████╗ "
+echo -e "██╔════╝██║  ██║██╔══██╗██╔═══██╗██╔════╝╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║██╔══██╗"
+echo -e "██║     ███████║███████║██║   ██║███████╗ ╚████╔╝ ███████╗   ██║   █████╗  ██╔████╔██║███████║"
+echo -e "██║     ██╔══██║██╔══██║██║   ██║╚════██║  ╚██╔╝  ╚════██║   ██║   ██╔══╝  ██║╚██╔╝██║██╔══██║"
+echo -e "╚██████╗██║  ██║██║  ██║╚██████╔╝███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║██║  ██║"
+echo -e " ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝"                                                                                                          
 echo ""
 
 ##### FUNCTIONS #####
@@ -31,29 +31,101 @@ fi
 ##### END #####
 
 
-##### PACMAN #####
+##### BASE #####
 echo "Installing base..."
 sudo pacman --needed --noconfirm -S base-devel curl wget unzip dosfstools vi less figlet libzip \
-    niri waybar fuzzel swaybg swayidle swayimg wl-clipboard ripgrep wf-recorder slurp xwayland-satellite \
-    xdg-desktop-portal-gtk xdg-desktop-portal-gnome tree imagemagick alacritty bluez bluez-utils mpv transmission-cli ueberzugpp
+    tree imagemagick bluez bluez-utils mpv transmission-cli ueberzugpp
 echo " base installed!"
 
+cd ~
+
+##### WINDOW MANAGER #####
+while true; do
+    echo "---------------------------"
+    echo "    Window Manager Menu"
+    echo "---------------------------"
+    echo "1) Install DWM (Xorg)"
+    echo "2) Install Niri (Wayland)"
+    echo "3) Quit"
+    
+    read -p "Enter choice [1-3]: " choice
+
+    case $choice in
+        1)
+            sudo pacman --needed --noconfirm -S libx11 libxft libxinerama xorg-server xorg-xinit xorg-xsetroot \
+                dmenu xclip scrot nsxiv feh
+            echo " DWM installed!"
+            break
+            ;;
+        2)
+            sudo pacman --needed --noconfirm -S niri waybar fuzzel swaybg swayidle swayimg wl-clipboard yazi \
+                ripgrep wf-recorder slurp xwayland-satellite xdg-desktop-portal-gtk xdg-desktop-portal-gnome alacritty \
+                rustup rust-analyzer
+            echo " Niri installed!"
+
+            echo "Configuring Rust..."
+            rustup default stable
+            echo " Rust configured!"
+            
+            echo "Setting yazi config..."
+            mkdir -p .config/yazi
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
+            mv theme.toml yazi.toml .config/yazi
+            echo " yazi configured!"
+
+            echo "Setting niri config..."
+            mkdir -p .config/niri/scripts
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/niri/scripts/idle.sh
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/niri/config.kdl
+            mv idle.sh .config/niri/scripts
+            mv config.kdl .config/niri
+            echo " niri configured!"
+
+            echo "Setting waybar config..."
+            mkdir -p .config/waybar
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/waybar/config.jsonc
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/waybar/style.css
+            mv config.jsonc style.css .config/waybar
+            echo " waybar configured!"
+
+            echo "Setting fuzzel config..."
+            mkdir -p .config/fuzzel
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/fuzzel/fuzzel.ini
+            mv fuzzel.ini .config/fuzzel
+            echo " fuzzel configured!"
+  
+            echo "Setting alacritty config..."
+            mkdir -p .config/alacritty
+            wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
+            mv alacritty.toml .config/alacritty/
+            echo " alacritty configured!"
+            
+            break
+            ;;
+        3)
+            echo "Aborted!"
+            exit 0
+            ;;
+        *)
+            echo "Error: '$choice' is not a valid option. Please try again."
+            echo ""
+            ;;
+    esac
+done
+##### END #####
+
 echo "Installing office apps..."
-sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell yazi
+sudo pacman --needed --noconfirm -S libreoffice-still ttf-iosevka-nerd zathura zathura-pdf-mupdf gimp translate-shell
 echo " office apps installed!"
 
 echo "Installing programming tools..."
 sudo pacman --needed --noconfirm -S neovim lua lua-language-server jdk25-openjdk go gopls \
     delve clang netcat lsof maven jq docker docker-compose docker-buildx \
-    plantuml gdb unixodbc rustup rust-analyzer
+    plantuml gdb unixodbc
 echo " programming tools installed!"
 ##### END #####
 
-echo "Configuring Rust..."
-rustup default stable
-echo " Rust configured!"
-
-cd ~
 
 mkdir -p .config
 
@@ -71,40 +143,12 @@ makepkg -si
 cd ..
 rm -rdf yay
 echo " yay installed!"
-
-echo "Setting yazi config..."
-mkdir -p .config/yazi
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/theme.toml
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/yazi/yazi.toml
-mv theme.toml yazi.toml .config/yazi
-echo " yazi configured!"
-
-echo "Setting niri config..."
-mkdir -p .config/niri/scripts
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/niri/scripts/idle.sh
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/niri/config.kdl
-mv idle.sh .config/niri/scripts
-mv config.kdl .config/niri
-echo " niri configured!"
-
-echo "Setting waybar config..."
-mkdir -p .config/waybar
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/waybar/config.jsonc
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/waybar/style.css
-mv config.jsonc style.css .config/waybar
-echo " waybar configured!"
-
-echo "Setting fuzzel config..."
-mkdir -p .config/fuzzel
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/fuzzel/fuzzel.ini
-mv fuzzel.ini .config/fuzzel
-echo " fuzzel configured!"
 ##### END #####
 
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-paru --noconfirm -S jdtls slides lombok-common java-debug librewolf-bin passcualito gativideo
+paru --noconfirm -S jdtls slides lombok-common java-debug librewolf-bin passcualito
 echo " AUR software installed!"
 ##### END #####
 
@@ -114,12 +158,6 @@ echo "Setting bash config..."
 rm .bashrc
 wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bashrc
 echo " bash configured!"
-
-echo "Setting alacritty config..."
-mkdir -p .config/alacritty
-wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.config/alacritty/alacritty.toml
-mv alacritty.toml .config/alacritty/
-echo " alacritty configured!"
 
 echo "Setting zathura config..."
 mkdir -p .config/zathura
@@ -151,4 +189,4 @@ sudo usermod -aG docker $USER
 echo " docker configured!"
 ##### END #####
 
-echo "󰣇 javi-linux finished. Reboot your computer."
+echo "󰣇 chaosystema-linux finished. Reboot your computer."
