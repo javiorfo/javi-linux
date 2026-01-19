@@ -53,7 +53,7 @@ while true; do
     case $choice in
         1)
             sudo pacman --needed --noconfirm -S libx11 libxft libxinerama xorg-server xorg-xinit xorg-xsetroot \
-                dmenu xclip scrot nsxiv feh peek
+                xclip scrot nsxiv feh peek
 
             echo "Installing dwm..."
             git clone https://github.com/javiorfo/dwm
@@ -68,7 +68,14 @@ while true; do
             sudo make clean install
             cd ..
             echo " ST installed!"
-
+            
+            echo "Installing dmenu..."
+            git clone https://github.com/javiorfo/dmenu
+            cd dmenu
+            sudo make clean install
+            cd ..
+            echo " DMENU installed!"
+            
             echo "Installing config files..."
             rm .bash_profile .xinitrc
             wget https://raw.githubusercontent.com/javiorfo/dotfiles/master/.bash_profile
