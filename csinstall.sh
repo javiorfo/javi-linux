@@ -182,7 +182,7 @@ echo " yay installed!"
 
 ##### AUR #####
 echo "Installing programs from AUR..."
-paru --noconfirm -S jdtls slides lombok-common java-debug librewolf-bin passcualito xautolock
+paru --noconfirm -S jdtls slides lombok-common java-debug librewolf-bin passcualito xautolock gativideo
 echo " AUR software installed!"
 ##### END #####
 
