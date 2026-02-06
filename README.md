@@ -1,4 +1,4 @@
-# chaosystema-linux
+# javi-linux
 *Personal post-install script for Arch Linux*
 
 ## Caveats
@@ -6,9 +6,9 @@
 
 ## Installation
 ```bash
-git clone https://github.com/javiorfo/cs-linux
-cd cs-linux
-./csinstall.sh
+git clone https://github.com/javiorfo/javi-linux
+cd javi-linux
+./javinstall.sh
 ```
 
 ---
