@@ -1,5 +1,5 @@
 # cask-strength-linux
-*Personal post-install script for Arch Linux*
+*Personal post-install script for Arch Linux. High-performance, lightweight and pure*
 
 ## Caveats
 - Dependencies: `git`
