@@ -1,4 +1,4 @@
-# javi-linux
+# cask-strength-linux
 *Personal post-install script for Arch Linux*
 
 ## Caveats
@@ -6,9 +6,9 @@
 
 ## Installation
 ```bash
-git clone https://github.com/javiorfo/javi-linux
-cd javi-linux
-./javinstall.sh
+git clone https://github.com/javiorfo/cask-strength-linux
+cd cask-strength-linux
+./csinstall.sh
 ```
 
 ---
